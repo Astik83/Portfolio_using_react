@@ -1,0 +1,247 @@
+/* Card Section */
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 32px;
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  .card-section h2 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333; /* Section title color */
+  }
+  
+  /* General Card Styles */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Ensure text is visible on a white background */
+    flex: 1 1 calc(33.33% - 32px); /* 3 cards per row on large screens */
+    transition: transform 0.3s ease; /* Smooth hover animation */
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Single Image Card */
+  .single-image-card img {
+    width: 100%;
+    height: 325px;
+    border-bottom: 3px solid aqua;
+  }
+  
+  /* Two Images Card */
+  .two-images-card .card-images {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .two-images-card .card-image {
+    width: 48%;
+    height: 125px;
+    border-radius: 4px;
+  }
+  
+  /* Card Content */
+  .card-content {
+    padding: 16px;
+    text-align: center;
+    color: #333; /* Text color */
+  }
+  
+  .card-content h3 {
+    font-size: 1.5rem; /* Larger project title */
+    margin-bottom: 8px;
+    color: #000; /* Project title color */
+    font-weight: bold;
+  }
+  
+  .card-content p {
+    font-size: 1rem; /* Description font size */
+    color: #666; /* Project description color */
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  
+  /* Button inside the Card */
+  .btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+  transform: translateY(-2px); /* Lift effect on hover */
+  }
+
+  /* Active state to make it feel pressed */
+.btn:active {
+  background-color: #1e7e34;
+  transform: translateY(1px); /* Slightly pressed effect */
+}
+  
+  /* Card Hover Effect */
+  .card:hover {
+    transform: translateY(-10px);
+  }
+
+  /* Button inside the Card for ongoing project */
+.btn_ongoing {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for a smoother, interactive look */
+.btn_ongoing:hover {
+  background-color: #218838;
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Active state to make it feel pressed */
+.btn_ongoing:active {
+  background-color: #1e7e34;
+  transform: translateY(1px); /* Slightly pressed effect */
+}
+
+  
+ 
+
+
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .card {
+      flex: 1 1 calc(50% - 32px); /* 2 cards per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 100%; /* 1 card per row on small screens */
+    }
+  
+    .two-images-card .card-images {
+      flex-direction: row;
+      gap: 12px;
+    }
+  
+    .two-images-card .card-image {
+      width: 100%; /* Full-width images for smaller screens */
+    }
+  
+    .card-content {
+      padding: 12px;
+    }
+  
+    .card-content h3 {
+      font-size: 1.2rem; /* Adjusted for smaller screens */
+    }
+  
+    .card-content p {
+      font-size: 0.9rem;
+    }
+  
+    .btn {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-section {
+      gap: 16px;
+    }
+  
+    .card-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Card with Four Images */
+.four-images-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card-images {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%; /* Ensures the images fit the card width */
+    padding: 8px;
+  }
+  
+  .card-images .row {
+    display: flex;
+    gap: 8px; /* Space between images in a row */
+    justify-content: center;
+  }
+  
+  .card-image {
+    flex: 1 1 calc(50% - 8px); /* Two images per row */
+    max-width: 48%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 100px; /* Fixed height for uniformity */
+  }
+  
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .card-image {
+      height: 80px; /* Reduce image size on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-image {
+      height: 70px; /* Further reduce image size for mobile */
+    }
+  
+    .four-images-card .card-content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .four-images-card .card-content p {
+      font-size: 0.9rem;
+    }
+  }
+   .on{
+
+    color:blue;
+
+   }

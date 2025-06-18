@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astik Shah - Web Developer | AI & ML Enthusiast</title>
+    <meta
+      name="description"
+      content="Explore Astik Shah's projects in web development, AI, and machine learning. Discover creative and innovative solutions designed to inspire!"
+    />
+
+    <link rel="stylesheet" href="/CSS/home.css" />
+    <link rel="stylesheet" href="/CSS/card.css" />
+    <link rel="stylesheet" href="/CSS/scroll-to-top.css" />
+    <link rel="stylesheet" href="/CSS/kiit.css">
+    <link rel="icon" href="img/astik-Photoroom.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+ <style>
+  /* Premium Heart Emoji Animation */
+.heart {
+  position: fixed;
+  top: -50px; /* start a bit above the viewport */
+  font-size: 40px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999;
+  animation: fall ease-in-out forwards;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg) scale(0.8);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(10px, 100px) rotate(15deg) scale(1.1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-20px, 300px) rotate(-10deg) scale(1.2);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translate(20px, 500px) rotate(5deg) scale(1.0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-30px, 100vh) rotate(-20deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+ </style>
+    
+  </head>
+  <body>
+    <div class="heart" style="top: 0; left: 50vw; animation-duration: 6s;"></div>
+
+    <!-- Header Section (Navbar) -->
+    <header>
+      <nav>
+        <div class="logo">ASTIK</div>
+        <ul id="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="cv.html" class="nav-link">Resume</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="animate-title">Welcome to Astik's Creative Hub</h1>
+          <p class="animate-subtitle">
+            Where web design meets AI, ML, and ideas come to life!
+          </p>
+          <a href="#projects" class="btn animate-button">Explore Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="animate-title">About Me</h2>
+          <p class="animate-text">
+            I'm Astik Shah, a 3rd-year CSE student at <a href="https://kiit.ac.in/about/"><span class="kiit">KIIT University</span></a> with a
+            passion for web design and development, along with a keen interest
+            in AI and ML. I enjoy creating clean, efficient, and user-friendly
+            web solutions while exploring and learning the latest technologies.
+            By combining web development with AI and ML, I strive to work on
+            projects that bring innovative ideas to life.
+          </p>
+        </div>
+        <div class="about-image">
+          <img
+            src="img/ast.png"
+            alt="Astik's Photo"
+            loading="lazy"
+            class="animate-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="card-section">
+      <h2>My Projects</h2>
+
+      <!-- Card with 4 Images -->
+      <div class="card four-images-card">
+        <div class="card-images">
+          <div class="row">
+            <img src="/img/ecc1.png" alt="home page " class="card-image" />
+            <img src="/img/wish.png" alt="wishlist page" class="card-image" />
+          </div>
+          <div class="row">
+            <img src="/img/ecc2.png" alt="shop page " class="card-image" />
+            <img src="/img/cart.png" alt="cart page" class="card-image" />
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Zynora: Redefining E-commerce Experiences</h3>
+          <p>
+            Developed using JavaScript and Tailwind CSS with lazy loading for enhanced user experience. Implemented cart and wishlist functionality using local storage, ensuring a responsive design across all devices.<span class="on">(Ongoing project)</span>.
+          </p>
+          <!-- <a class="btn_ongoing">Read More</a> -->
+          <a href="https://zynora-ecommerce-git-main-astik-shahs-projects.vercel.app/"><button class="btn_ongoing">Live Website</button></a>
+        </div>
+        <!-- <div
+          id="pop_msg"
+          style="
+            display: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+          "
+        >
+          This is ongoing!
+        </div> -->
+      </div>
+
+      <!-- Single Image Card -->
+      <div class="card single-image-card">
+        <img src="/img/jarvis1.png" alt="Project Image" />
+        <div class="card-content">
+          <h3>Jarvis:Personal AI Assistant</h3>
+          <p>
+            Description: Jarvis is an AI-powered personal assistant that
+            simplifies daily tasks through voice commands. It can open
+            applications, browse the web, manage messages, and provide weather
+            updates. By integrating with various APIs, Orion delivers a seamless
+            and responsive user experience.
+          </p>
+          <a href="https://github.com/Astik83/JarvisProject"
+            ><button class="btn">Read More</button></a
+          >
+        </div>
+      </div>
+
+      <div class="card single-image-card">
+        <img src="/img/laptop.png" alt="Project Image" />
+        <div class="card-content">
+          <h3>Laptop Price Predictor</h3>
+          <p>
+            Developed ML app with Python and Scikit-learn for price prediction.
+            Scraped 1900+ Flipkart listings and deployed via Streamlit.
+          </p>
+          <a href="https://laptop-price-predictor-a.streamlit.app/"
+            ><button class="btn">Live Website</button></a
+          >
+        </div>
+      </div>
+
+      <!-- Two Images Card -->
+      <div class="card two-images-card">
+        <div class="card-images">
+          <img src="img/blg1.png" alt="Project Image 1" class="card-image" />
+          <img src="/img/blg2.png" alt="Project Image 2" class="card-image" />
+        </div>
+        <div class="card-content">
+          <h3>CodePulse - Tech Blog</h3>
+          <p>
+            CodePulse is a responsive blog about tech , featuring a carousel,
+            easy navigation, and user login/signup modals, built with Bootstrap
+            for a smooth experience.
+          </p>
+          <a href="https://github.com/Astik83/codepulse-blog"><button class="btn">Read More</button></a>
+        </div>
+      </div>
+
+      <!-- <div id="pop_msg" style="display: none; background-color: #4CAF50; color: white; padding: 10px; text-align: center; border-radius: 5px;">
+        This is ongoing!
+      </div> -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out via the form below.</p>
+
+      <!-- Google Form Submit -->
+      <div class="contact-form">
+        <h3>Send Me a Message</h3>
+        <form
+          id="contactForm"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScSiRCtVvRk0wCINxLYc0zX95Jt7tlxa_T7_juX8FQjpcsBKg/formResponse"
+          method="post"
+          target="hidden_iframe"
+          onsubmit="return showSuccessMessage()"
+        >
+          <!-- Name Field -->
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="entry.985409477"
+            required
+            pattern="[A-Za-z\s]+"
+            title="Only letters allowed"
+          />
+
+          <!-- Email Field -->
+          <label for="email">Email</label>
+          <input type="email" id="email" name="entry.757463970" required />
+
+          <!-- Message Field -->
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="entry.1883601620"
+            rows="4"
+            required
+          ></textarea>
+
+          <!-- Submit Button -->
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <!-- Success Message Pop-up -->
+      <div
+        id="successMessage"
+        style="
+          display: none;
+          background-color: #4caf50;
+          color: white;
+          padding: 10px;
+          text-align: center;
+          border-radius: 5px;
+        "
+      >
+        Thanks for your message! I’ll get back to you shortly.
+      </div>
+    </section>
+
+    <!-- Hidden iframe for submitting form -->
+    <iframe name="hidden_iframe" style="display: none"></iframe>
+
+    <!-- Success Message Pop-up -->
+    <div
+      id="successMessage"
+      style="
+        display: none;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+      "
+    >
+      Your message has been sent successfully!
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Astik's Portfolio. All rights reserved.</p>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/astik.shah.5?mibextid=ZbWKwL"
+            target="_blank"
+            class="social-icon facebook"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="social-icon instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://github.com/Astik83"
+            target="_blank"
+            class="social-icon github"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://wa.me/+919114968828"
+            target="_blank"
+            class="social-icon whatsapp"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/astik-shah-04aa46344/"
+            target="_blank"
+            class="social-icon linkedin"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scroll to top -->
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script src="/Script/home.js"></script>
+    <script src="/Script/scroll-to-top.js"></script>
+
+    <!-- <script>
+      function createHeart() {
+        const heart = document.createElement('span');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️';  // Using the love emoji
+        heart.style.left = Math.random() * 100 + 'vw';
+        // Randomize animation duration between 4 and 8 seconds
+        const duration = Math.random() * 4 + 4;
+        heart.style.animationDuration = duration + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => {
+          heart.remove();
+        }, duration * 1000);
+      }
+    
+      // Create a new heart every 500 milliseconds
+      setInterval(createHeart, 500);
+    </script> -->
+    
+    
+    
+  </body>
+</html>

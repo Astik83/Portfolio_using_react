@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+  /* Navbar Styles */
+  nav {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: aqua;
+  }
+
+  #nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  #nav-links li {
+    margin-left: 20px;
+  }
+
+  #nav-links .nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Hover effect */
+  #nav-links .nav-link:hover {
+    background-color: gray;
+    border-radius: 5px;
+  }
+
+  /* Active state for the current section link */
+  #nav-links .nav-link.active {
+    background-color: aqua;
+    color: #333; /* Text color contrasting with the active background */
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Glow effect */
+  }
+
+  /* Hamburger Icon (Hidden on Desktop, Visible on Mobile) */
+  .menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    #nav-links {
+      display: none; /* Hide links by default */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    #nav-links li {
+      margin: 10px 0;
+    }
+
+    /* Show the links when menu is active */
+    #nav-links.active {
+      display: flex;
+    }
+
+    /* Show the hamburger icon */
+    .menu-icon {
+      display: block;
+    }
+  }
+  
+  
+    /* Hero Section Styles */
+    .hero {
+      margin-top: 60px;
+      height: 100vh;
+      background-image: url('/img/aa-Photoroom.png'); /* Background image */
+      background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden; /* To hide overflow during animations */
+    }
+  
+    /* Add a soft gradient overlay for a premium look */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+      z-index: 1;
+    }
+  
+    .hero-content {
+      z-index: 2; /* Keep content above the gradient overlay */
+      display: flex;
+      flex-direction: column; /* Stack content vertically */
+      align-items: flex-start;
+      max-width: 60%; /* Limit width for better readability */
+    }
+  
+    /* h1 Animation */
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff6f61, #00d1d1, #ff3d2e);
+      background-size: 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 4s linear infinite, bounceIn 2s ease-in-out;
+      transform-origin: left;
+    }
+  
+    /* p Animation */
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: rgba(255, 255, 255, 0.85);
+      animation: fadeInSlide 2.5s ease-in-out forwards;
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  
+    /* Button Styles */
+    .hero .btn {
+      padding: 15px 30px;
+      background-color: #ff6f61;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(255, 111, 97, 0.5);
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInButton 3s ease-in-out forwards;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  
+    .hero .btn:hover {
+      background-color: #ff3d2e;
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(255, 61, 46, 0.7);
+    }
+  
+    /* Keyframe Animations */
+    @keyframes gradientText {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.8) rotateX(-15deg);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.1) rotateX(5deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1) rotateX(0);
+        opacity: 1;
+      }
+    }
+  
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes fadeInButton {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+      .hero-content {
+        max-width: 90%;
+      }
+    }
+
+  
+  
+ /* About Section */
+.about-section {
+  padding: 80px 20px;
+  background-color: #252525;
+  color: #ffffff;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap; /* Wrap content for smaller screens */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;
+  gap: 40px; /* Space between text and image */
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the section */
+}
+
+.about-text {
+  flex: 2; /* Takes more space on large screens */
+  text-align: left;
+}
+
+.about-image {
+  flex: 1; /* Takes less space on large screens */
+  max-width: 300px; /* Limit image size */
+  order: 1; /* Default order for large screens */
+}
+
+.about-image img {
+  
+  width: 100%; /* Responsive image */
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6f61;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #dcdcdc;
+  max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+  }
+
+  .about-text {
+    order: 2; /* Move text below the image */
+    text-align: center;
+  }
+
+  .about-image {
+    order: 1; /* Move image on top */
+    max-width: 100%; /* Allow full width for small screens */
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+}
+
+   
+  /* Contact Section */
+  .contact-section {
+    padding: 40px 0;
+    background-color: black;
+    text-align: center;
+    
+  }
+  
+  .contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color:white;
+  }
+  
+  .contact-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #F8F8F8;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    background-color: #1F1F1F;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color:white;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact-form button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact-form button:focus {
+    outline: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-content,
+    .about-content {
+      flex-direction: column;
+    }
+  
+    .hero-text,
+    .about-text {
+      text-align: center;
+    }
+  
+    
+  
+    .contact-form {
+      padding: 20px;
+      margin: 0 10px;
+    }
+  
+    .contact-form h3 {
+      font-size: 24px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 14px;
+    }
+  
+    .contact-form button {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  }
+  
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects for Social Media */
+.social-icon.facebook:hover {
+  color: #3b5998; /* Facebook blue */
+}
+
+.social-icon.instagram:hover {
+  color: #e4405f; /* Instagram pink/red */
+}
+
+.social-icon.github:hover {
+  color: #cbcbcb; /* GitHub black */
+}
+
+.social-icon.whatsapp:hover {
+  color: #25d366; /* WhatsApp green */
+}
+
+.social-icon.linkedin:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+
+  /* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer-content p {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .social-links {
+    margin-top: 8px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}
+
+/* For even smaller screens (mobile phones) */
+@media (max-width: 480px) {
+  .footer-content p {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .social-icon {
+    font-size: 18px;
+    margin: 0 6px;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+}
+
