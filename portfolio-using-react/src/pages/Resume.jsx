@@ -2,37 +2,37 @@
 export function Resume() {
   return (
     <>
-    <link rel='icon' type='image' href='img/favicon.png'></link>
-     <div
-    
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100vw",
-        height: "100vh",
-        backgroundColor: "#ffffff",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        overflow: "hidden",
-        zIndex: 999,
-      }}
-    >
-      <iframe
-        src="https://drive.google.com/file/d/1Q-dRpTem4rIul12Kz_prU4f7CNELeaBI/preview"
-        width="70%"
-        height="90%"
+      <link rel="icon" type="image" href="img/favicon.png" />
+
+      <div
         style={{
-          border: "none",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "#ffffff",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          overflow: "hidden",
+          zIndex: 999,
+          padding: "1rem",
+          boxSizing: "border-box",
         }}
-        allow="autoplay"
-        title="My Resume"
-      ></iframe>
-    </div>
-    
+      >
+        <iframe
+          src="https://drive.google.com/file/d/1Q-dRpTem4rIul12Kz_prU4f7CNELeaBI/preview"
+          style={{
+            border: "none",
+            width: "100%",
+            height: "100%",
+            maxWidth: "800px", // limit width on large screens
+          }}
+          allow="autoplay"
+          title="My Resume"
+        ></iframe>
+      </div>
     </>
-    
-   
   );
 }
